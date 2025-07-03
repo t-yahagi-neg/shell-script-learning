@@ -1,3 +1,6 @@
 #!/bin/bash
 
-echo 'Hello world!'
+# ここはコメントです。
+# echo 'この行は実行されません。'
+
+echo 'Hello world!' # 行の途中からでもコメントをつけることができます。
