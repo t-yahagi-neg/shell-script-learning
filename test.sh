@@ -1,5 +1,5 @@
 #!/bin/bash
 
-var=value
-var2='${var1}'
+var1=value
+var2="${var1}"
 echo $var2
