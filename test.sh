@@ -1,6 +1,8 @@
 #!/bin/bash
 
-var='set'
+var=value	# クォーテーションを付けなくても文字列の扱いになる
 echo $var
-unset var	# unser するときは $ をつけない
-echo $var	# 未定義なので何も表示されない
+var='hoge fuga'	# スペースを含む場合はクォーテーションをつける必要がある
+echo $var
+var=hoge fuga	# クォーテーションをつけないと予期せぬエラーに
+echo $var
