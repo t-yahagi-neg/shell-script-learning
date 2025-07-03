@@ -1,7 +1,7 @@
 #!/bin/bash
 
-var='value'	# = の周りにスペースを入れてはいけません
-echo $var	# 後述しますが $ は変数を参照する時につける記号です
+var1='value'
+echo $var1	# $ で変数を参照
 
-var='change'	# 定義済みの変数の値を変更することも可能です
-echo $var
+var2=$var1	# 代入先の変数には $ をつけません
+echo ${var2}	# {} をつけても参照できます
