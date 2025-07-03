@@ -1,8 +1,7 @@
 #!/bin/bash
 
-var=value	# クォーテーションを付けなくても文字列の扱いになる
-echo $var
-var='hoge fuga'	# スペースを含む場合はクォーテーションをつける必要がある
-echo $var
-var=hoge fuga	# クォーテーションをつけないと予期せぬエラーに
-echo $var
+empty=''
+echo \$empty: $empty	# 後述のエスケープを使用
+empty=	# これも空文字を意味する
+echo \$empty: $empty
+echo \$undefined: $undefined
