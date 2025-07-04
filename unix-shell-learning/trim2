@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# 引数チェック
+if [ $# -ne 1]; then
+	echo "使い方: $0 ファイル名"
+	exit 1
+fi
+
+FILE="$1"
+
+# ファイルが存在しなければ終了
+if [ ! -f "$FILE" ]; then
+	echo "エラー: ファイルが存在しません -> $FILE"
+	exit 1
+fi
+
+# 上2行だけを一時ファイルに保存し、元のファイルに上書き
+head -n 2 "$FILE" > "${FILE}.tmp" && mv "${FILE}.tmp" "$FILE"
+
+echo "上2行だけを残しました: $FILE"
