@@ -13,6 +13,6 @@ log_error()	{ echo -e "${RED}[ERROR] $1${NC}"; }
 
 # 本体処理
 log_info "スクリプト開始"
-echo $0
-echo $1
+echo '入力値' $1	# 第1引数を出力
+exit $1			# exit コマンドで終了ステータスを指定
 log_info "スクリプト終了"
