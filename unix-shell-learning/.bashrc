@@ -158,7 +158,7 @@ alias test='
 	START_FMT=$(date "+%Y-%m-%d %H:%M:%S");
 	echo -e "\033[0;32m[INFO] スクリプト開始: $START_FMT\033[0m" | tee -a "$LOGFILE";
 
-	bash "$SCRIPT_DIR/test.sh";
+	bash "$SCRIPT_DIR/test";
 	EXIT_CODE=$?;
 
 	END_TIME=$(date +%s);
@@ -171,3 +171,14 @@ alias test='
 		echo -e "\033[0;31m[ERROR] スクリプト異常終了: $END\FMT(${DURATION}秒\033[0m" | tee -a "$LOGFILE";
 	fi
 '
+
+# ファイル作成時に実行権限を付与
+mksh() {
+	local filename="$1"
+	echo '#!/bin/bash' > "$filename"
+	chmod +x "$filename"
+	echo "作成 & 実行権限付与: $filename"
+}
+
+# シェルスクリプトを「./」を省略して実行できるようにパスを通す
+export PATH="$HOME/dev/unix-shell-learning:$PATH"
