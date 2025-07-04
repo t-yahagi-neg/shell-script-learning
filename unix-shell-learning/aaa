@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# ANSWER という変数にはキーボードからの入力がセットされる
-echo -n "enter yes or no --> "
-read ANSWER
