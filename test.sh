@@ -13,6 +13,27 @@ log_error()	{ echo -e "${RED}[ERROR] $1${NC}"; }
 
 # 本体処理
 log_info "スクリプト開始"
-echo '入力値' $1	# 第1引数を出力
-exit $1			# exit コマンドで終了ステータスを指定
+echo ------------
+echo 引数の数 $#
+echo '$1'の値 $1
+echo '$2'の値 $2
+shift
+echo $?
+echo ------------
+echo 引数の数 $#
+echo '$1'の値 $1
+echo '$2'の値 $2
+shift
+echo $?
+echo ------------
+echo 引数の数 $#
+echo '$1'の値 $1
+echo '$2'の値 $2
+shift
+echo $?
+echo ------------
 log_info "スクリプト終了"
+
+# shiftコマンドを実行すると、位置パラメータの内容が左に1つ移動する
+# ($2 の値が $1 に、$3 の値が $2 に...)
+# $# の値も減っていく
