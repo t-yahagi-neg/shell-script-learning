@@ -1,5 +1,8 @@
 #!/bin/bash
 
-# echo "root directory"
 cd /
 ls
+
+# cd
+# pwd
+# ls -l # 詳細情報も表示する
