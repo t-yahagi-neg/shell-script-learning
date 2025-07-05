@@ -1,3 +1,8 @@
 #!/bin/bash
 
-echo 'Hello, world!';pwd;ls 
+cd /
+ls
+
+cd
+pwd
+ls -l
