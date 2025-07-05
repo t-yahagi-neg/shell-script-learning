@@ -1,6 +1,3 @@
 #!/bin/bash
 
-echo \
-'Hello, world!' \
-'This is my shell script.' \
-'Good bye.'
+echo 'Hello, world!';pwd;ls 
