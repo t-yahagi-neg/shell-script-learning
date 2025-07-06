@@ -143,6 +143,26 @@ script() {
 	} | tee -a "$log_file"
 }
 
+mvsh() {
+	local name="$1"
+	local file="${name}.sh"
+	local dest="script_old"
+
+	if [[ -z "$name" ]]; then
+		echo "使用方法: mvsh ファイル名(.sh は省略)"
+		return 1
+	fi
+
+	if [[ ! -f "$file" ]]; then
+		echo "エラー: ${file} が見つかりません"
+		return 1
+	fi
+
+	mkdir -p "$dest"
+	mv "$file" "$dest/"
+	echo "✅ ${file} を ${dest}/ に移動しました"
+}
+
 # ディレクトリにパスを通す
 export PATH="$HOME/shell-scripts/RHEL:$PATH"
 
