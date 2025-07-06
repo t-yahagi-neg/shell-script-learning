@@ -63,26 +63,65 @@ parse_git_branch() {
 export PS1="${CYAN}RedHat $(parse_git_branch)${CYAN}\$ ${RESET}"
 
 # スクリプトのパス
-SCRIPT_DIR="$HOME/dev/RHEL"
-LOGFILE="$HOME/dev/RHEL/test.log"
+SCRIPT_DIR="$HOME/shell-scripts/RHEL"
+LOGFILE="$HOME/shell-scripts/RHEL/test.log"
 
 # エイリアス定義（ログ全部マシマシ）
- alias test='
-	START_TIME=$(date +%s);
-	START_FMT=$(date "+%Y-%m-%d %H:%M:%S");
-	echo -e "\033[0;32m[INFO] スクリプト開始: $START_FMT\033[0m" | tee -a "$LOGFILE";
+test() {
+    START_TIME=$(date +%s)
+    START_FMT=$(date "+%Y-%m-%d %H:%M:%S")
+    echo -e "\033[0;32m[INFO] スクリプト開始: $START_FMT\033[0m" | tee -a "$LOGFILE"
 
-	bash "$SCRIPT_DIR/test.sh";
-	EXIT_CODE=$?;
+    bash "$SCRIPT_DIR/test.sh"
+    EXIT_CODE=$?
 
-	END_TIME=$(date +%s);
-	END_FMT=$(date "+%Y-%m-%d %H:%M:%S");
-	DURATION=$((END_TIME - START_TIME))
+    END_TIME=$(date +%s)
+    END_FMT=$(date "+%Y-%m-%d %H:%M:%S")
+    DURATION=$((END_TIME - START_TIME))
 
-	if [ $EXIT_CODE -eq 0 ]; then
-		echo -e "\033[0;32m[INFO] スクリプト正常終了: $END_FMT(${DURATION}秒)\033[0m" | tee -a "$LOGFILE";
-	else
-		echo -e "\033[0;31m[ERROR] スクリプト異常終了: $END_FMT(${DURATION}秒)\033[0m" | tee -a "$LOGFILE";
+    if [ $EXIT_CODE -eq 0 ]; then
+        echo -e "\033[0;32m[INFO] スクリプト正常終了: $END_FMT (${DURATION}秒)\033[0m" | tee -a "$LOGFILE"
+    else
+        echo -e "\033[0;31m[ERROR] スクリプト異常終了: $END_FMT (${DURATION}秒)\033[0m" | tee -a "$LOGFILE"
+    fi
+}
+
+script() {
+	local script_dir="$HOME/shell-scripts/RHEL"
+	local log_file="$script_dir/script.log"
+	local name="$1"
+
+	if [[ -z "$name" ]]; then
+		echo "使用方法: script <ファイル名 (拡張子なし)>"
+		return 1
 	fi
-'
 
+	local full_path="$script_dir/${name}.sh"
+
+	if [[ ! -f "$full_path" ]]; then
+		echo "エラー: ファイルが存在しません -> $full_path"
+		return 1
+	fi
+
+	if [[ ! -x "$full_path" ]]; then
+		echo "エラー: 実行権限がありません -> $full_path"
+		return 1
+	fi
+
+	{
+		echo "===== 実行開始: $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$log_file"
+		echo "ファイル: $full_path" >> "$log_file"
+		bash "$full_path" >> "$log_file" 2>&1
+		echo "===== 実行終了: $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$log_file"
+		echo >> "$log_file"
+	} | tee -a "$log_file"
+}
+
+# ディレクトリにパスを通す
+export PATH="$HOME/shell-scripts/RHEL:$PATH"
+
+# exec > >(tee -a "$HOME/bash_$(date +%Y%m%d).log") 2>&1
+
+# if [[ -n $PS1 ]]; then
+#	exec > >(tee -a "$HOME/bash_$(date +%Y%m%d).log") 2>&1
+# fi
