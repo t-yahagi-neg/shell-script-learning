@@ -38,3 +38,33 @@ Hokkaido
 5
 ===== 実行終了: 2025-07-06 23:40:36 =====
 
+===== 実行開始: 2025-07-06 23:46:54 =====
+ファイル: /home/rhel/shell-scripts/RHEL/arr-blank.sh
+Hokkaido
+Aomori
+
+Miyagi
+
+Yamagata
+Fukushima
+インデックスを指定しないとインデックス0を参照
+Hokkaido
+配列の要素数を取得
+5
+===== 実行終了: 2025-07-06 23:46:54 =====
+
+===== 実行開始: 2025-07-06 23:48:04 =====
+ファイル: /home/rhel/shell-scripts/RHEL/arr-blank.sh
+Hokkaido
+Aomori
+
+Miyagi
+
+Yamagata
+Fukushima
+インデックスを指定しないとインデックス0を参照
+Hokkaido
+配列の要素数を取得
+5
+===== 実行終了: 2025-07-06 23:48:04 =====
+

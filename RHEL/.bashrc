@@ -109,11 +109,15 @@ script() {
 	fi
 
 	{
-		echo "===== 実行開始: $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$log_file"
-		echo "ファイル: $full_path" >> "$log_file"
-		bash "$full_path" >> "$log_file" 2>&1
-		echo "===== 実行終了: $(date '+%Y-%m-%d %H:%M:%S') =====" >> "$log_file"
-		echo >> "$log_file"
+		echo "===== 実行開始: $(date '+%Y-%m-%d %H:%M:%S') ====="
+		echo "ファイル: $full_path"
+	} | tee -a "$log_file"
+
+	bash "$full_path" 2>&1 | tee -a "$log_file"
+
+	{
+		echo "===== 実行終了: $(date '+%Y-%m-%d %H:%M:%S') ====="
+		echo
 	} | tee -a "$log_file"
 }
 
