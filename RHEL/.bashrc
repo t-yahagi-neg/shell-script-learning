@@ -91,32 +91,48 @@ script() {
 	local log_file="$script_dir/script.log"
 	local name="$1"
 
+	local GREEN='\033[0;32m'
+	local RED='\033[0;31m'
+	local YELLOW='\033[1;33m'
+	local BLUE='\033[0;34m'
+	local ORANGE='\033[38;5;214m'
+	local RESET='\033[0m'
+
 	if [[ -z "$name" ]]; then
-		echo "使用方法: script <ファイル名 (拡張子なし)>"
+		echo -e "${YELLOW}使用方法: script <ファイル名 (拡張子なし)>${RESET}"
 		return 1
 	fi
 
 	local full_path="$script_dir/${name}.sh"
 
 	if [[ ! -f "$full_path" ]]; then
-		echo "エラー: ファイルが存在しません -> $full_path"
+		echo -e "${RED}エラー: ファイルが存在しません -> $full_path${RESET}" | tee -a "$log_file"
 		return 1
 	fi
 
 	if [[ ! -x "$full_path" ]]; then
-		echo "エラー: 実行権限がありません -> $full_path"
+		echo -e "${RED}エラー: 実行権限がありません -> $full_path${RESET}" | tee -a "$log_file"
 		return 1
 	fi
 
+	local timestamp_start=$(date '+%Y-%m-%d %H:%M:%S')
 	{
-		echo "===== 実行開始: $(date '+%Y-%m-%d %H:%M:%S') ====="
-		echo "ファイル: $full_path"
+		echo -e "${GREEN}===== 実行開始: $(date '+%Y-%m-%d %H:%M:%S') =====${RESET}"
+		echo -e "${ORANGE}ファイル: $full_path${RESET}"
 	} | tee -a "$log_file"
 
 	bash "$full_path" 2>&1 | tee -a "$log_file"
+	local exit_code=$?
+
+	local timestamp_end=$(date '+%Y-%m-%d %H:%M:%S')
+	if [[ $exit_code -eq 0 ]]; then
+		echo -e "${BLUE}✅ スクリプトは正常に完了しました：${timestamp_end}${RESET}" | tee -a "$log_file"
+	else
+		echo -e "${RED}❌ スクリプトは異常終了しました(コーデ：$exit_code)：${timestamp_end}${RESET}" | tee -a "$log_file"
+	fi
 
 	{
-		echo "===== 実行終了: $(date '+%Y-%m-%d %H:%M:%S') ====="
+		echo -e "${GREEN}===== 実行終了: $(date '+%Y-%m-%d %H:%M:%S') =====${RESET}"
 		echo
 	} | tee -a "$log_file"
 }
