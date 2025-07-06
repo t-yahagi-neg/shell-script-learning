@@ -1,0 +1,40 @@
+===== 実行開始: 2025-07-06 22:32:45 =====
+ファイル: /home/rhel/shell-scripts/RHEL/pid.sh
+23117
+===== 実行終了: 2025-07-06 22:32:45 =====
+
+===== 実行開始: 2025-07-06 22:35:39 =====
+ファイル: /home/rhel/shell-scripts/RHEL/pid.sh
+23151
+===== 実行終了: 2025-07-06 22:35:39 =====
+
+===== 実行開始: 2025-07-06 23:39:34 =====
+ファイル: /home/rhel/shell-scripts/RHEL/arr-blank.sh
+Hokkaido
+Aomori
+
+Miyagi
+
+Yamagata
+Fukushima
+インデックスを指定しないとインデックス0を参照
+Hokkaido
+配列の要素数を取得
+5
+===== 実行終了: 2025-07-06 23:39:34 =====
+
+===== 実行開始: 2025-07-06 23:40:36 =====
+ファイル: /home/rhel/shell-scripts/RHEL/arr-blank.sh
+Hokkaido
+Aomori
+
+Miyagi
+
+Yamagata
+Fukushima
+インデックスを指定しないとインデックス0を参照
+Hokkaido
+配列の要素数を取得
+5
+===== 実行終了: 2025-07-06 23:40:36 =====
+
