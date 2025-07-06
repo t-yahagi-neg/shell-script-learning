@@ -38,6 +38,12 @@ commit() {
 	git commit -m "$*"
 }
 
+# Git add + commit をまとめて実行する関数
+gac() {
+	git add .
+	git commit -m "$*"
+}
+
 # Git add + commit + push をまとめて実行する関数
 gacp() {
 	git add .
