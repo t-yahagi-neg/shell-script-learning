@@ -12,7 +12,6 @@
 ./work/out_file.txt
 ./work/Sample1.txt
 ./result.log
-./function01.sh
 ./script.log
 ./script_old/base02.sh
 ./script_old/base01.sh
@@ -21,6 +20,7 @@
 ./script_old/base09.sh
 ./script_old/base04.sh
 ./script_old/base03.sh
+./script_old/function01.sh
 ./script_old/base06.sh
 ./script_old/base11.sh
 ./script_old/base05.sh

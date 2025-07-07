@@ -170,3 +170,8 @@ find: ‘f’: そのようなファイルやディレクトリはありませ�
 [38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/function01.sh[0m
 /home/yahagi/dev/scripts/shell-recipe/function01.sh: line 25: $result_file: ambiguous redirect
 
+[0;32m===== 実行開始: 2025-07-07 12:30:25 =====[0m
+[38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/function02.sh[0m
+not exsit backup_dir
+[0;34mスクリプトは正常に完了しました：2025-07-07 12:30:25[0m
+[0;32m===== 実行終了：2025-07-07 12:30:25 =====[0m
