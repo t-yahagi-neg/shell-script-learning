@@ -84,3 +84,19 @@ rsync error: some files/attrs were not transferred (see previous errors) (code 2
 [38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/base10.sh[0m
 [0;34mスクリプトは正常に完了しました：2025-07-07 11:55:43[0m
 [0;32m===== 実行終了：2025-07-07 11:55:43 =====[0m
+[0;32m===== 実行開始: 2025-07-07 11:59:34 =====[0m
+[38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/base11.sh[0m
+find: ‘.work’: そのようなファイルやディレクトリはありません
+[0;34mスクリプトは正常に完了しました：2025-07-07 11:59:34[0m
+[0;32m===== 実行終了：2025-07-07 11:59:34 =====[0m
+[0;32m===== 実行開始: 2025-07-07 11:59:44 =====[0m
+[38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/base11.sh[0m
+work/Samples.gz
+work/include_file
+work/sync/sync/Sample
+work/sync/base/Sample
+work/test
+work/Sample.txt.gz
+work/out_file.txt
+[0;34mスクリプトは正常に完了しました：2025-07-07 11:59:44[0m
+[0;32m===== 実行終了：2025-07-07 11:59:44 =====[0m
