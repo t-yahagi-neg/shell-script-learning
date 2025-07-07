@@ -311,3 +311,22 @@ Features: Cipher DPC Modules OpenMP(4.5)
 Delegates (built-in): bzlib djvu fftw fontconfig freetype heic jbig jng jp2 jpeg lcms lqr ltdl lzma openexr pangocairo png raw tiff webp wmf x xml zlib
 [0;34mスクリプトは正常に完了しました：2025-07-07 15:54:53[0m
 [0;32m===== 実行終了：2025-07-07 15:54:53 =====[0m
+[0;32m===== 実行開始: 2025-07-07 16:02:08 =====[0m
+[38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/picture06.sh[0m
+Version: ImageMagick 6.9.12-98 Q16 x86_64 18038 https://legacy.imagemagick.org
+Copyright: (C) 1999 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Cipher DPC Modules OpenMP(4.5) 
+Delegates (built-in): bzlib djvu fftw fontconfig freetype heic jbig jng jp2 jpeg lcms lqr ltdl lzma openexr pangocairo png raw tiff webp wmf x xml zlib
+/home/yahagi/dev/scripts/shell-recipe/picture06.sh: 19 行: [: `]'がありません
+[0;34mスクリプトは正常に完了しました：2025-07-07 16:02:08[0m
+[0;32m===== 実行終了：2025-07-07 16:02:08 =====[0m
+[0;32m===== 実行開始: 2025-07-07 16:03:53 =====[0m
+[38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/picture06.sh[0m
+Version: ImageMagick 6.9.12-98 Q16 x86_64 18038 https://legacy.imagemagick.org
+Copyright: (C) 1999 ImageMagick Studio LLC
+License: https://imagemagick.org/script/license.php
+Features: Cipher DPC Modules OpenMP(4.5) 
+Delegates (built-in): bzlib djvu fftw fontconfig freetype heic jbig jng jp2 jpeg lcms lqr ltdl lzma openexr pangocairo png raw tiff webp wmf x xml zlib
+[0;34mスクリプトは正常に完了しました：2025-07-07 16:03:54[0m
+[0;32m===== 実行終了：2025-07-07 16:03:54 =====[0m
