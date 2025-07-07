@@ -199,3 +199,38 @@ mv: 'work/basesample02' を stat できません: そのようなファイルや
 [38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/function03.sh[0m
 [0;34mスクリプトは正常に完了しました：2025-07-07 13:36:27[0m
 [0;32m===== 実行終了：2025-07-07 13:36:27 =====[0m
+[0;32m===== 実行開始: 2025-07-07 13:43:41 =====[0m
+[38;5;214mファイル: /home/yahagi/dev/scripts/shell-recipe/function04.sh[0m
+./work/include_key
+./work/Samples.gz
+./work/include_file
+./work/sync/sync/Sample
+./work/sync/base/Sample
+./work/サンプル.txt
+./work/さんぷる.txt
+./work/test
+./work/test-file
+./work/Sample１.txt
+./work/Sample.txt.gz
+./work/out_file.txt
+./work/Sample1.txt
+./result.log
+./script.log
+./script_old/base02.sh
+./script_old/base01.sh
+./script_old/base08.sh
+./script_old/base10.sh
+./script_old/base09.sh
+./script_old/base04.sh
+./script_old/base03.sh
+./script_old/function01.sh
+./script_old/base06.sh
+./script_old/base11.sh
+./script_old/base05.sh
+./script_old/base07.sh
+./script_old/base14.sh
+./script_old/base13.sh
+./script_old/base15.sh
+./script_old/base12.sh
+[0;34mスクリプトは正常に完了しました：2025-07-07 13:43:41[0m
+[0;32m===== 実行終了：2025-07-07 13:43:41 =====[0m
